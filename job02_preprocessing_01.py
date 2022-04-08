@@ -26,6 +26,6 @@ for review in df.reviews:
     cleaned_sentences.append(cleaned_sentence)
 df['cleaned_sentences'] = cleaned_sentences
 df = df[['title', 'cleaned_sentences']]
-df.to_csv('./crawling_data/cleaned_review_2019_21_43.csv',
+df.to_csv('./crawling_data/cleaned_reviews_2019_21_43.csv',
           index=False)
 df.info()

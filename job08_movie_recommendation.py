@@ -23,14 +23,14 @@ with open('./models/tfidf.pickle','rb') as f:
     Tfidf = pickle.load(f)
 
 # 영화 제목 이용
-movie_idx = df_reviews[df_reviews['title']=='기생충'].index[0]
+movie_idx = df_reviews[df_reviews['title']=='해피 데스데이 2 유'].index[0]
 print(movie_idx)
 print(df_reviews.iloc[movie_idx,0])
 
-# 영화 index 이용
-movie_idx = 461
-print(movie_idx)
-print(df_reviews.iloc[movie_idx,0])
+# #영화 index 이용
+# movie_idx = 469
+# print(movie_idx)
+# print(df_reviews.iloc[movie_idx,0])
 
 consine_sim = linear_kernel(Tridf_matrix[movie_idx], Tridf_matrix)
 recommendation = getRecommendation(consine_sim)

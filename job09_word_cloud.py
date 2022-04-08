@@ -15,7 +15,7 @@ rc('font' ,family=font_name)
 df = pd.read_csv('./datasets/movie_review_2018_2022.csv')
 print(df.head())
 
-words = df.iloc[218,1]
+words = df.iloc[461,1]
 print(words)
 
 words = words.split()
